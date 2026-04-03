@@ -9,7 +9,7 @@
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <span class="navbar-brand">Sistem Akademik</span>
+            <span class="navbar-brand">Sistem Akademik Taura University</span>
         </div>
     </nav>
 </body>
