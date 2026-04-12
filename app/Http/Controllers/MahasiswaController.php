@@ -32,7 +32,7 @@ class MahasiswaController extends Controller
     {
         $request->validate([
             'nim' => 'required|unique:mahasiswa',
-            'nama' => 'required',
+            'nama' => 'required|min:3',
             'jurusan' => 'required'
         ]);
 
@@ -66,8 +66,8 @@ class MahasiswaController extends Controller
         $data = Mahasiswa::findOrFail($id);
 
         $request->validate([
-            'nim' => 'required',
-            'nama' => 'required',
+            'nim' => 'required|unique:mahasiswa,nim,'.$id,
+            'nama' => 'required|min:3',                  
             'jurusan' => 'required'
         ]);
 

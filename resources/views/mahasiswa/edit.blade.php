@@ -12,6 +12,16 @@
     @section('content')
     <h3>Edit Mahasiswa</h3>
 
+
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <form action="{{ route('mahasiswa.update', $data->id) }}" method="POST">
     @csrf
     @method('PUT')
